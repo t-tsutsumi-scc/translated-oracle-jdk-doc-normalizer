@@ -18,7 +18,7 @@ compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
 dependencies {
-    implementation("info.picocli:picocli:4.7.2")
+    implementation("info.picocli:picocli:4.7.3")
     implementation("org.jsoup:jsoup:1.15.4")
 }
 

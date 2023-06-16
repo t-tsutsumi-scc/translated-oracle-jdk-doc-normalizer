@@ -17,13 +17,13 @@ Normalize the translated Oracle JDK documentation archive for use in IntelliJ ID
                     Ex: "DejaVu Sans Mono", Consolas. Use the default browser font if empty.
 ```
 
-### Gradle
+### Gradle w/ bash
 
 ```bash
 ./gradlew run --args="--proportional-font= jdk-17-docs-ja.zip"
 ```
 
-### Docker
+### Docker w/ bash
 
 ```bash
 docker run --rm -v $PWD:/docs \
@@ -31,5 +31,16 @@ docker run --rm -v $PWD:/docs \
            -o /docs/17-mydoc.zip \
            --proportional-font='Meiryo, "Hiragino Kaku Gothic ProN"' \
            --monospaced-font='Consolas' \
+           /docs/17.zip
+```
+
+### Docker w/ command prompt
+
+```cmd
+docker run --rm -v .:/docs ^
+           ghcr.io/t-tsutsumi-scc/translated-oracle-jdk-doc-normalizer:main ^
+           -o /docs/17-mydoc.zip ^
+           --proportional-font="Meiryo, \"Hiragino Kaku Gothic ProN\"" ^
+           --monospaced-font="Consolas" ^
            /docs/17.zip
 ```

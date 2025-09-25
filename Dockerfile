@@ -8,7 +8,7 @@ RUN ./gradlew installDist
 
 ## 2nd stage
 
-FROM eclipse-temurin:21.0.8_9-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 WORKDIR /app
 ENTRYPOINT ["java", "-jar", "translated-oracle-jdk-doc-normalizer.jar"]

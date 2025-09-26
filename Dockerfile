@@ -1,6 +1,6 @@
 ## 1st stage
 
-FROM eclipse-temurin:21.0.8_9-jdk-jammy AS build
+FROM eclipse-temurin:25-jdk-jammy AS build
 
 COPY . /src
 WORKDIR /src
